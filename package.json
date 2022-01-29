@@ -1,0 +1,27 @@
+{
+  "name": "quiz-agent",
+  "version": "1.0.0",
+  "description": "A sample quiz bot ",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js",
+    "lint": "eslint --ext .js --ignore-path .gitignore ."
+  },
+  "author": "Anshuman Kumar",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dialogflow-fulfillment": "^0.6.1",
+    "express": "^4.17.2",
+    "lodash": "^4.17.21",
+    "nodemon": "^2.0.15",
+    "winston": "^3.5.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.8.0"
+  }
+}
