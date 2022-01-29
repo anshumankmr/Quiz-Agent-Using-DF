@@ -3,10 +3,16 @@ const createIntentMap = require("../src/intentHandler");
 
 const intentMapper = (req,res) =>
 {
-  const agent = new WebhookClient({ request: req, response: res });
-  const intentMap = createIntentMap(agent);
-  agent.handleRequest(intentMap);
-  return agent;
+  try {
+    const agent = new WebhookClient({ request: req, response: res });
+    const intentMap = createIntentMap(agent);
+    agent.handleRequest(intentMap);
+    return agent;
+  }
+  catch(e)
+  {
+    console.error(e);
+  }
 };
 const getHealth = (req,res) =>
 {

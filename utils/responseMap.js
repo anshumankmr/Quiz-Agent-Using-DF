@@ -7,6 +7,14 @@ module.exports = {
 
     invalidQuestionNumber: 'Oops. I don\'t have that many questions in my database. Please try a smaller number',
 
-    invalidNumberFallback: 'That does not seem like a valid input. Please try again?'
+    invalidNumberFallback: 'That does not seem like a valid input. Please try again?',
+    
+    finalScore: 'Your final score is <%= finalScore %>',
+    
+    correctAnswer: 'Answer is correct',
+
+    
+    incorrectAnswer: 'Answer is incorrect'
+
 
 };
