@@ -12,11 +12,13 @@ const buildPayload = (questionData) => {
     
     let j = 0;
     for (let i = 0; i < constants.numberOfChips; i++) {
+      const option = ((i + 10).toString(36).toUpperCase());
+          
         if (i === randomCorrectIndex){
           payload.richContent[0][i] = {
             "type": "list",
             "title": questionData.correct_answer,
-            "subtitle": `Option ${i}`,
+            "subtitle": `Option ${option}`,
             "event": {
               "name": "CorrectEvent",
               "languageCode": "en",
@@ -27,7 +29,7 @@ const buildPayload = (questionData) => {
           payload.richContent[0][i] =  {
             "type": "list",
             "title":  questionData.incorrect_answers[j],
-            "subtitle": `Option ${i}`,
+            "subtitle": `Option ${option}`,
 
             "event": {
               "name": "IncorrectEvent",

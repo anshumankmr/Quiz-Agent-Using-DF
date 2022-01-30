@@ -42,7 +42,7 @@ const askQuestion = (agent) => {
     } 
     else {
         const values = {'finalScore': globalParameters.parameters.finalScore || 0 };
-        agent.add(setTemplate(responseMap.finalScore, values));
+        agent.add(globalParameters.parameters.lastAnswer+ '\n'+ setTemplate(responseMap.finalScore, values));
     }
     //set output context
 
